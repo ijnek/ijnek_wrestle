@@ -205,9 +205,9 @@ class Nao (Robot):
 
         # IMU
         a = self.accelerometer.getValues()
-        self.sensors["Accelerometer"] = [ -a[0], a[1], a[2] ]
+        self.sensors["Accelerometer"] = [ a[0], a[1], -a[2] ]
         g = self.gyro.getValues()
-        self.sensors["Gyroscope"] = [ g[0], g[1], -g[2] ]
+        self.sensors["Gyroscope"] = [ g[0], g[1], g[2] ]
         # imu = self.inertialUnit.getRollPitchYaw()
         # self.sensors["Angles"] = [ imu[0], imu[1] ]
 
