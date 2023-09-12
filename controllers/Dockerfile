@@ -20,4 +20,4 @@ RUN source /opt/ros/rolling/setup.bash && \
 
 # Source the ROS rolling setup file, run the controller in the background, and ROS launch in foreground
 WORKDIR /usr/local/webots-project/controllers/participant
-CMD python3 -u participant.py & source /home/vscode/ws/install/setup.bash && ros2 launch wrestle all.launch.py
+ENTRYPOINT [ "/usr/local/webots-project/controllers/participant/start.sh" ]
