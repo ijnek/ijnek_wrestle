@@ -1,4 +1,5 @@
 FROM ghcr.io/ijnek/wrestling_image:main
+USER vscode
 
 # Environment variables needed for Webots
 # https://cyberbotics.com/doc/guide/running-extern-robot-controllers#remote-extern-controllers
