@@ -1,5 +1,12 @@
 FROM ghcr.io/ijnek/wrestling_image:main
-USER vscode
+
+# Add vscode user with same UID and GID as your host system
+# (copied from https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user#_creating-a-nonroot-user)
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+# Switch from root to user
+USER $USERNAME
 
 # Environment variables needed for Webots
 # https://cyberbotics.com/doc/guide/running-extern-robot-controllers#remote-extern-controllers
