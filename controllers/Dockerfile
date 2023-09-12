@@ -4,6 +4,7 @@ USER root
 
 # Environment variables needed for Webots
 # https://cyberbotics.com/doc/guide/running-extern-robot-controllers#remote-extern-controllers
+ENV WEBOTS_HOME=/usr/local/webots/
 ENV PYTHONPATH=${WEBOTS_HOME}/lib/controller/python
 ENV PYTHONIOENCODING=UTF-8
 ENV LD_LIBRARY_PATH=${WEBOTS_HOME}/lib/controller:${LD_LIBRARY_PATH}
