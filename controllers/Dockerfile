@@ -15,12 +15,6 @@ ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
 RUN mkdir -p /usr/local/webots-project/controllers
 COPY . /usr/local/webots-project/controllers
 
-# Build workspace
-RUN source /opt/ros/rolling/setup.bash && \
-    cd /home/vscode/ws && \
-    rosdep install --from-paths src -i -y -r && \
-    colcon build --packages-up-to wrestle
-
 # Source the ROS rolling setup file, run the controller in the background, and ROS launch in foreground
 WORKDIR /usr/local/webots-project/controllers/participant
 ENTRYPOINT [ "/usr/local/webots-project/controllers/participant/start.sh" ]
