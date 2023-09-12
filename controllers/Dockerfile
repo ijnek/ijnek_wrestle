@@ -10,7 +10,7 @@ ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
 
 # Copies all the files of the controllers folder into the docker container
 RUN sudo mkdir -p /usr/local/webots-project/controllers
-COPY . /usr/local/webots-project/controllers
+COPY --chown=$USERNAME:$USERNAME . /usr/local/webots-project/controllers
 
 # Build workspace
 RUN source /opt/ros/rolling/setup.bash && \
