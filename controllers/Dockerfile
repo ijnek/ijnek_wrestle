@@ -12,10 +12,5 @@ ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
 ENV USER=root
 
-# Copies all the files of the controllers folder into the docker container
-RUN mkdir -p /usr/local/webots-project/controllers
-COPY . /usr/local/webots-project/controllers
-
-# Source the ROS rolling setup file, run the controller in the background, and ROS launch in foreground
-WORKDIR /usr/local/webots-project/controllers/participant
-ENTRYPOINT [ "/usr/local/webots-project/controllers/participant/start.sh" ]
+# Source the ROS rolling setup file, and ROS launch
+CMD source /home/vscode/ws/install/setup.bash && ros2 launch wrestle all.launch.py
