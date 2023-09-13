@@ -251,7 +251,7 @@ DEF WRESTLER_RED Nao {
   translation -0.8799744792182869 -1.4293163826973563e-10 0.38350684010704045
   rotation 5.48725670668853e-06 0.9999999999849338 -1.4975684555154508e-07 7.762177499810259e-05
   name "participant"
-  controller "participant"
+  controller "<extern>"
   window "competition_description"
   supervisor TRUE
   synchronization FALSE
