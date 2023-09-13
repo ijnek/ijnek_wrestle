@@ -1,6 +1,6 @@
 {
   "name": "ijnek",
-  "description": "Description of my robot controller program.",
+  "description": "ROS 2 based controller",
   "team": ["Kenji Brameld"],
   "organization": "ROS Sports",
   "country": "AU",
