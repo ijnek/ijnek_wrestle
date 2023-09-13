@@ -10,6 +10,7 @@ ENV PYTHONIOENCODING=UTF-8
 ENV LD_LIBRARY_PATH=${WEBOTS_HOME}/lib/controller:${LD_LIBRARY_PATH}
 ARG WEBOTS_CONTROLLER_URL
 ENV WEBOTS_CONTROLLER_URL=${WEBOTS_CONTROLLER_URL}
+ENV USER=root
 
 # Copies all the files of the controllers folder into the docker container
 RUN mkdir -p /usr/local/webots-project/controllers
