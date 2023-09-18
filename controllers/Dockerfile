@@ -1,5 +1,5 @@
 # FROM ghcr.io/ijnek/wrestling_image:main
-FROM ghcr.io/ijnek/wrestling_image@sha256:166a57ebde0043609041ec438a7b3d248f2bd81092c7adca37c2530b2e1199b9
+FROM ghcr.io/ijnek/wrestling_image@sha256:5b0c66496e80ccbdf6b24bea490061469dabb818b64729aab47b8520db494e73
 
 USER root
 
