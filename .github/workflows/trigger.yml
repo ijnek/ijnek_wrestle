@@ -3,11 +3,12 @@
 name: Trigger Evaluation
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - controllers/**
+  # Commented out for now (ijnek)
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - controllers/**
 
   workflow_dispatch:
 
